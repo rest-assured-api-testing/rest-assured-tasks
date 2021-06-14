@@ -12,44 +12,49 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 public class RequestSpecificatioN {
-    private static SettingRequest settingRequest;
+    private SettingRequest settingRequest;
+    private String projectId;
 
     @BeforeClass
-    public static void setup(){
-        SettingParameter settingParameter= new SettingParameter();
+    public void setup() {
+        SettingParameter settingParameter = new SettingParameter();
         settingParameter.setBaseURL("https://www.pivotaltracker.com");
         settingParameter.setBasePath("/services/v5");
         settingParameter.setContentType(ContentType.JSON);
-        settingRequest=new SettingRequest(settingParameter);
+        settingParameter.setTokenKey("X-TrackerToken");
+        settingParameter.setTokenValue("1d24b2ee47d04c09615c6811a19fba0a");
+        settingRequest = new SettingRequest(settingParameter);
+        projectId = "2503580";
     }
 
     @Test
-    public void testGetEpics1(){
-        String actual = settingRequest.request( new CallGet("name[0]"),"/projects/2503580/epics/");
-        String expected= "Test-NewEpic";
+    public void testGetEpics1() {
+        String actual = settingRequest.request(new CallGet("name[0]"), "/projects/" + projectId + "/epics/");
+        String expected = "Test-NewEpic";
         Assert.assertEquals(actual, expected);
     }
 
     @Test
-    public void testGetEpics2(){
-        String actual = settingRequest.request( new CallGet("label[0]","updated_at"),"/projects/2503580/epics/");
-        String expected= "2021-06-14T01:31:01Z";
+    public void testGetEpics2() {
+        String actual = settingRequest.request(new CallGet("label[0]", "updated_at"), "/projects/" + projectId + "/epics/");
+        String expected = "2021-06-14T01:31:01Z";
         Assert.assertEquals(actual, expected);
     }
 
     @Test
-    public void testStatus(){
-        String actual = settingRequest.request( new CallStatus(),"/projects/2503580/epics/");
-        String expected= "200";
+    public void testStatus() {
+        String projectId = "2503580";
+        String actual = settingRequest.request(new CallStatus(), "/projects/" + projectId + "/epics/");
+        String expected = "200";
         Assert.assertEquals(actual, expected);
     }
 
     @Test
     public void testCreateEpic(){
         Epic epic = new Epic();
-        epic.setName("Test-NewEpic2");
-        epic.setDescription("Test fadsfd");
-        String actual = settingRequest.request( new CallPost(epic),"/projects/2503580/epics/");
+        epic.setName("Test-NewEpic4");
+        epic.setDescription("Test 645, I hope this work");
+        String actual = settingRequest.request( new CallPost(epic),"/projects/2504059/epics/");
         String expected= "200";
         Assert.assertEquals(actual, expected);
     }

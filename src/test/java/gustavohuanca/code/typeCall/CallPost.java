@@ -1,5 +1,6 @@
 package gustavohuanca.code.typeCall;
 
+import gustavohuanca.code.SettingParameter;
 import gustavohuanca.code.entities.Epic;
 import io.restassured.http.ContentType;
 
@@ -20,7 +21,7 @@ public class CallPost implements IRequestCall{
 
     private int responseCallStatus(String pathEndPoint){
         return given()
-                .header("X-TrackerToken", "1d24b2ee47d04c09615c6811a19fba0a")
+                .header(SettingParameter.getTokenKey(), SettingParameter.getTokenValue())
                 .contentType(ContentType.JSON)
                 .body(epic)
                 .when()

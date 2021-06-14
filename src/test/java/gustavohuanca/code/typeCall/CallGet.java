@@ -1,5 +1,6 @@
 package gustavohuanca.code.typeCall;
 
+import gustavohuanca.code.SettingParameter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
@@ -35,7 +36,7 @@ public class CallGet implements IRequestCall {
      */
     private Response responseCallGet(String pathEndPoint) {
         return given()
-                .header("X-TrackerToken", "1d24b2ee47d04c09615c6811a19fba0a")
+                .header(SettingParameter.getTokenKey(), SettingParameter.getTokenValue())
                 .when()
                 .get(pathEndPoint)
                 .then()

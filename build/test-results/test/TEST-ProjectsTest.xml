@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="ProjectsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T11:52:20" hostname="DESKTOP-S1N5SIH" time="1.976">
+  <properties/>
+  <testcase name="shouldReturnProject" classname="ProjectsTest" time="1.976"/>
+  <system-out><![CDATA[{
+    "id": 2267249741,
+    "color": 48,
+    "name": "Inbox",
+    "comment_count": 0,
+    "shared": false,
+    "favorite": false,
+    "sync_id": 0,
+    "inbox_project": true,
+    "url": "https://todoist.com/showProject?id=2267249741"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

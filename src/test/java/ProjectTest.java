@@ -1,5 +1,5 @@
+import danielaSCA.Object;
 import danielaSCA.TestLayer;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.apache.http.HttpStatus;
 

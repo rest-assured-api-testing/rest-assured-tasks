@@ -1,3 +1,5 @@
+package danielaSCA;
+
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 @JsonPropertyOrder({"name", "color", "favorite"})

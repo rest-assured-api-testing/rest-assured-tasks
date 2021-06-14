@@ -20,15 +20,11 @@ public class ApiTodoistTest {
 
     @Test
     public void testACreateProject() {
-        Project project = new Project();
-        project.setName("API Testing13");
-        project.setColor(43);
-        project.setFavorite(true);
+        Project project = new Project("API Testing13", 43, true);
 
         Response response = Requests.createAProject(project);
 
         Assert.assertEquals(response.statusCode(), HttpStatus.SC_OK);
-
     }
 
     @Test(dataProvider = "testProvider")

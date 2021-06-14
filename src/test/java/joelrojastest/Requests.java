@@ -9,9 +9,10 @@ import static io.restassured.RestAssured.given;
 
 public class Requests {
     public static final String TOKEN = "acea0f034eb75c9d8ed7ca11d0f74376f5b7bba8";
+    public static final String URL = "https://api.todoist.com/rest/v1/";
 
     public static Response createAProject(Project project) {
-        String url = "https://api.todoist.com/rest/v1/projects";
+        String url = URL + "projects";
         RequestSpecification requestSpecification = given()
                 .auth().oauth2(TOKEN)
                 .contentType(ContentType.JSON)
@@ -21,10 +22,9 @@ public class Requests {
     }
 
     public static Response getAProject(String id) {
-        String url = "https://api.todoist.com/rest/v1/projects/{id}";
+        String url = URL + "projects/{id}";
         RequestSpecification requestSpecification = given()
-                .header("Content-type", "application/json")
-                .header("Authorization", "Bearer " + TOKEN)
+                .auth().oauth2(TOKEN)
                 .pathParam("id", id);
         return getRequest(requestSpecification,url);
     }

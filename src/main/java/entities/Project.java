@@ -23,6 +23,22 @@ public class Project {
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private String id;
 
+    public Project() {}
+
+    public Project(String name) {
+        this.name = name;
+    }
+
+    public Project(String name, Integer color) {
+        this(name);
+        this.color = color;
+    }
+
+    public Project(String name, Integer color, boolean favorite) {
+        this(name, color);
+        this.favorite = favorite;
+    }
+
     public Integer getOrder() {
         return order;
     }

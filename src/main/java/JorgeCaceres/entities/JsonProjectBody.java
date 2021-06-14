@@ -1,15 +1,27 @@
 package JorgeCaceres.entities;
 
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+
+@JsonPropertyOrder({"id","order", "color","name","comment_count","shared","favorite","sync_id","inbox_project","url"})
 public class JsonProjectBody {
     private String id;
-    private String color;
+    private int order;
+    private int color;
     private String name;
-    private String comment_count;
+    private int comment_count;
     private String shared;
     private String favorite;
-    private String sync_id;
+    private int sync_id;
     private String inbox_project;
     private String url;
+
+    public int getOrder() {
+        return order;
+    }
+
+    public void setOrder(int order) {
+        this.order = order;
+    }
 
     public JsonProjectBody() {
 
@@ -23,11 +35,11 @@ public class JsonProjectBody {
         this.id = id;
     }
 
-    public String getColor() {
+    public int getColor() {
         return color;
     }
 
-    public void setColor(String color) {
+    public void setColor(int color) {
         this.color = color;
     }
 
@@ -39,11 +51,11 @@ public class JsonProjectBody {
         this.name = name;
     }
 
-    public String getComment_count() {
+    public int getComment_count() {
         return comment_count;
     }
 
-    public void setComment_count(String comment_count) {
+    public void setComment_count(int comment_count) {
         this.comment_count = comment_count;
     }
 
@@ -63,11 +75,11 @@ public class JsonProjectBody {
         this.favorite = favorite;
     }
 
-    public String getSync_id() {
+    public int getSync_id() {
         return sync_id;
     }
 
-    public void setSync_id(String sync_id) {
+    public void setSync_id(int sync_id) {
         this.sync_id = sync_id;
     }
 

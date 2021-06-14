@@ -13,5 +13,20 @@ class JsonBodyTest {
         String actual = jsonBody.getName();
         Assert.assertEquals(expected,actual);
     }
-
+    @Test
+    public void createAProject(){
+        JsonProjectBody jsonBody = JsonBody.createProjectBody("{\"name\": \"Fake\"}","0c15909dcdf9d6e60767fc261a78335a9477506a");
+        String expected = "Fake";
+        String actual = jsonBody.getName();
+        Assert.assertEquals(expected,actual);
+    }
+    @Test
+    public void createASerializedProject(){
+        JsonProjectBody test = new JsonProjectBody();
+        test.setName("Mago");
+        JsonProjectBody jsonBody = JsonBody.createASerializedProject(test,"0c15909dcdf9d6e60767fc261a78335a9477506a");
+        String expected = "Mago";
+        String actual = jsonBody.getName();
+        Assert.assertEquals(expected,actual);
+    }
 }

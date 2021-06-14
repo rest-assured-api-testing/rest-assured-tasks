@@ -1,6 +1,7 @@
 package JorgeCaceres.RestAPIs;
 
 
+import JorgeCaceres.entities.JsonProjectBody;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -27,7 +28,15 @@ public class EndPoints {
         Response response = request.body(body).post("/rest/v1/projects");
         return response;
     }
-    public static Response updateProject(String body,String id, String token) {
+    public static Response createSerializedProject(JsonProjectBody body, String token){
+        RestAssured.baseURI = BASE_URL;
+        RequestSpecification request = RestAssured.given();
+        request.header("Authorization", "Bearer " + token)
+                .header("Content-Type", "application/json");
+        Response response = request.body(body).post("/rest/v1/projects");
+        return response;
+
+    }    public static Response updateProject(String body,String id, String token) {
         RestAssured.baseURI = BASE_URL;
         RequestSpecification request = RestAssured.given();
         request.header("Authorization", "Bearer " + token)

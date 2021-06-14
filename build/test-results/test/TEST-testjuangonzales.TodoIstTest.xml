@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="testjuangonzales.TodoIstTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T02:22:45" hostname="DESKTOP-OVASR7T" time="2.799">
+  <properties/>
+  <testcase name="findProject" classname="testjuangonzales.TodoIstTest" time="2.799"/>
+  <system-out><![CDATA[Request method:	GET
+Request URI:	https://api.todoist.com/rest/v1/projects/2267559900
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	idProject=2267559900
+Headers:		Accept=*/*
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: 206
+Connection: keep-alive
+Date: Mon, 14 Jun 2021 02:22:47 GMT
+X-Cache: Miss from cloudfront
+Via: 1.1 840a2b350c8a57aa5bbbbd4bc2395e73.cloudfront.net (CloudFront)
+X-Amz-Cf-Pop: SCL50-C1
+X-Amz-Cf-Id: zkV7qVBWpWBILzckyr3MNgxz2dA43HaVbtmOhhenZ1JatoKB1YHo0A==
+
+{
+    "id": 2267559900,
+    "order": 5,
+    "color": 43,
+    "name": "API Testing 4",
+    "comment_count": 0,
+    "shared": false,
+    "favorite": false,
+    "sync_id": 0,
+    "url": "https://todoist.com/showProject?id=2267559900"
+}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,8 +1,0 @@
-Test.java
- Test
-juangonzalesapi/entities/CreateProjectRequest.java
- juangonzalesapi.entities.CreateProjectRequest
-juangonzalesapi/endpoints/Endpoint.java
- juangonzalesapi.endpoints.Endpoint
-testjuangonzales/TodoIstTest.java
- testjuangonzales.TodoIstTest

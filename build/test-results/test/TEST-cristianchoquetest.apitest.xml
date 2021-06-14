@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cristianchoquetest.apitest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T01:27:52" hostname="DESKTOP-75EOLU7" time="3.523">
+  <properties/>
+  <testcase name="test1()" classname="cristianchoquetest.apitest" time="3.523"/>
+  <system-out><![CDATA[Request method:	GET
+Request URI:	https://api.todoist.com/rest/v1/projects
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer 01f43459372ebd473e01f786b9a66c6d0304756e
+				Accept=*/*
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+[
+    {
+        "id": 2267202894,
+        "color": 48,
+        "name": "Inbox",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "inbox_project": true,
+        "url": "https://todoist.com/showProject?id=2267202894"
+    },
+    {
+        "id": 2267202895,
+        "order": 1,
+        "color": 48,
+        "name": "Te damos la bienvenida ?",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267202895"
+    },
+    {
+        "id": 2267202896,
+        "order": 2,
+        "color": 48,
+        "name": "Prueba los Paneles",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267202896"
+    },
+    {
+        "id": 2267234459,
+        "order": 3,
+        "color": 47,
+        "name": "shopping list 1",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267234459"
+    },
+    {
+        "id": 2267234543,
+        "order": 4,
+        "color": 47,
+        "name": "shopping list 2 updated",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267234543"
+    },
+    {
+        "id": 2267236705,
+        "order": 5,
+        "color": 47,
+        "name": "shopping list 3",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267236705"
+    },
+    {
+        "id": 2267325020,
+        "order": 6,
+        "color": 47,
+        "name": "project created from java",
+        "comment_count": 0,
+        "shared": false,
+        "favorite": false,
+        "sync_id": 0,
+        "url": "https://todoist.com/showProject?id=2267325020"
+    }
+]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

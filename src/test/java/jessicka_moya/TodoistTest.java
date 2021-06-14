@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 public class TodoistTest {
 
     @Test
-    public void testGetProjectNames() {
+    public void itShouldGetAProjectName() {
         String expectedResult = "Project API favorite";
         Response response = ConfigurationRequest.getProject("2267256371");
         Project project = response.as(Project.class);
@@ -17,7 +17,7 @@ public class TodoistTest {
     }
 
     @Test
-    public void createProject() {
+    public void itShouldCreateAProject() {
         int status = 200;
         Project project = new Project();
         project.setName("Project API Test");

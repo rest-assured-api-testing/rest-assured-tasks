@@ -15,4 +15,15 @@ public class TodoistTest {
         Project project = response.as(Project.class);
         Assert.assertEquals(project.getName(), expectedResult);
     }
+
+    @Test
+    public void createProject() {
+        int status = 200;
+        Project project = new Project();
+        project.setName("Project API Test");
+        ConfigurationRequest.createProject(project)
+                .then()
+                .assertThat()
+                .statusCode(status);
+    }
 }

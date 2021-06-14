@@ -3,6 +3,7 @@ package jessicka_moya.todoist_api;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import jessicka_moya.entities.Project;
 
 public class ConfigurationRequest {
     public static final String TODOIST_TOKEN = "3c72b9a42be1313c3f48e58c42d1e0290e475d5b";
@@ -14,6 +15,14 @@ public class ConfigurationRequest {
         request.header("Content-Type", "application/json");
         request.pathParam("projectId",projectId);
         Response response = request.when().get("/projects/{projectId}");
+        return response;
+    }
+
+    public static Response createProject(Project project) {
+        RestAssured.baseURI = BASE_URI;
+        RequestSpecification request = RestAssured.given() .auth().oauth2(TODOIST_TOKEN);
+        request.header("Content-Type", "application/json");
+        Response response = request.body(project).when().post("/projects");
         return response;
     }
 }

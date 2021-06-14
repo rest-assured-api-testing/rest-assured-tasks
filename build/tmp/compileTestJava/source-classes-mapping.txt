@@ -1,4 +1,6 @@
-cristianchoquetest/apitest.java
- cristianchoquetest.apitest
 Test.java
  Test
+cristianchoquetest/Apitest.java
+ cristianchoquetest.Apitest
+cristianchoquetest/ProjectTest.java
+ cristianchoquetest.ProjectTest

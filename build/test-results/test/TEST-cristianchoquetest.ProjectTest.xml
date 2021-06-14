@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="cristianchoquetest.ProjectTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-14T05:30:24" hostname="DESKTOP-75EOLU7" time="3.328">
+  <properties/>
+  <testcase name="deleteProject" classname="cristianchoquetest.ProjectTest" time="3.328"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

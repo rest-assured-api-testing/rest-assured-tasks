@@ -3,6 +3,7 @@ package gustavohuanca.code;
 import gustavohuanca.code.typeCall.IRequestCall;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
+import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
 
 public class SettingRequest {
@@ -46,6 +47,6 @@ public class SettingRequest {
      */
     private void showLogging(){
         //RestAssured.filters(new RequestLoggingFilter(), new ResponseLoggingFilter());
-        //RestAssured.filters( new ResponseLoggingFilter());
+        RestAssured.filters( new ResponseLoggingFilter());
     }
 }

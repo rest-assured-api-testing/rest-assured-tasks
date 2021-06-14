@@ -43,7 +43,6 @@ public class RequestSpecificatioN {
 
     @Test
     public void testStatus() {
-        String projectId = "2503580";
         String actual = settingRequest.request(new CallStatus(), "/projects/" + projectId + "/epics/");
         String expected = "200";
         Assert.assertEquals(actual, expected);

@@ -1,4 +1,4 @@
-package entities;
+package JorgeCaceres.entities;
 
 public class JsonProjectBody {
     private String id;

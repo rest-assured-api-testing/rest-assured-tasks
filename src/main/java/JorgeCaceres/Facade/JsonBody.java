@@ -1,7 +1,7 @@
-package Facade;
+package JorgeCaceres.Facade;
 
-import RestAPIs.EndPoints;
-import entities.JsonProjectBody;
+import JorgeCaceres.RestAPIs.EndPoints;
+import JorgeCaceres.entities.JsonProjectBody;
 import io.restassured.response.Response;
 
 

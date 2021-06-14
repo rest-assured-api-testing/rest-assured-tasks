@@ -1,10 +1,9 @@
-package Facade;
+package JorgeCaceresTest.Facade;
 
-import entities.JsonProjectBody;
+import JorgeCaceres.Facade.JsonBody;
+import JorgeCaceres.entities.JsonProjectBody;
 import org.junit.jupiter.api.Test;
 import org.testng.Assert;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class JsonBodyTest {
     @Test

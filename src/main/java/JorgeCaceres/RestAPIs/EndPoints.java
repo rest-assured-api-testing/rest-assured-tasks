@@ -1,4 +1,4 @@
-package RestAPIs;
+package JorgeCaceres.RestAPIs;
 
 
 import io.restassured.RestAssured;

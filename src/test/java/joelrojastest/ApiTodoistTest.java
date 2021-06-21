@@ -2,10 +2,13 @@ package joelrojastest;
 
 import entities.Project;
 import io.restassured.response.Response;
+import joelrojas.RequestManager;
 import org.apache.http.HttpStatus;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import static joelrojas.config.Configuration.CONFIG;
 
 public class ApiTodoistTest {
 
@@ -22,14 +25,16 @@ public class ApiTodoistTest {
     public void testACreateProject() {
         Project project = new Project("API Testing13", 43, true);
 
-        Response response = Requests.createAProject(project);
+        Response response = RequestManager.createAEntity(project, CONFIG.getProperty("ENDPOINT_PROJECTS")
+                , CONFIG.getProperty("TOKEN"));
 
         Assert.assertEquals(response.statusCode(), HttpStatus.SC_OK);
     }
 
     @Test(dataProvider = "testProvider")
     public void testGetProjectNames(String id, String expectedResult) {
-        Response response = Requests.getAProject(id);
+        Response response = RequestManager.getAProject(CONFIG.getProperty("ENDPOINT_PROJECT"), id
+                , CONFIG.getProperty("TOKEN"));
 
         Project project = response.as(Project.class);
 
